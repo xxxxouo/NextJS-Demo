@@ -11,7 +11,7 @@ export async function generateMetadata({params,searchParams}){
   }
 }
 
-export default ({children,params}) =>{
+export default function Layout({children,params}){
   // const[ state, setState ] = useState(null)
   // const { productId } = params
   // useEffect(()=>{
