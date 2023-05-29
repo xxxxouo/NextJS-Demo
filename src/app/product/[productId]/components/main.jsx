@@ -3,11 +3,10 @@ import {useRouter,usePathname,useSearchParams} from 'next/navigation';
 import React from 'react'
 import Link from 'next/link';
 
-export default function main({params}) {
+export default function Main({params}) {
   const { productId} = params
   const router = useRouter()
   const pathName = usePathname()
-  console.log(productId,pathName);
 
   return (
     <div>
