@@ -13,7 +13,11 @@ const nextConfig = {
   },
   env:{
     APP_ENV:process.env.APP_ENV
-  }
+  },
+  webpack: (config) => {
+    config.resolve.alias['pancake'] = path.join(__dirname, './packages/pancake-toolkit/packages/pancake-uikit/src');
+    return config;
+  },
 }
 
 module.exports = nextConfig
