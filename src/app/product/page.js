@@ -1,22 +1,22 @@
-import React from 'react'
-import Buttom from './components/Bottom'
-export async function generateMetadata({parmas,searchParams}){
-  const data = await new Promise((res)=>{setTimeout(res("产品"),1000)})
+"use client"
+import React,{ Suspense } from 'react'
+import dynamic from 'next/dynamic';
+
+
+export async function generateMetadata({params,searchParams}){
+  const data = await new Promise((res)=>{setTimeout(res("商品"),1000)})
    return {
     title:data
    }
 }
 
-
+const DynamicPage = dynamic(()=>import('./components/ProductList'))
+const DynamicBtn = dynamic(()=>import('./components/Bottom'))
 export default function page() {
   return (
     <div>
-      <ul>
-        <li>产品 1 </li>
-        <li>产品 2 </li>
-        <li>产品 3 </li>
-      </ul>
-      <Buttom />
+      <DynamicPage />
+      <DynamicBtn />
     </div>
   )
 }

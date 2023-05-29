@@ -3,6 +3,14 @@
 
 // export const productIdContext = createContext(null)
 
+export async function generateMetadata({params,searchParams}){
+  const {productId} = params
+  const data = await new Promise((res => setTimeout(res(productId),1000)))
+  return {
+    title:`商品${data}的详情`
+  }
+}
+
 export default ({children,params}) =>{
   // const[ state, setState ] = useState(null)
   // const { productId } = params
@@ -11,7 +19,7 @@ export default ({children,params}) =>{
   // },[productId])
   return (
     // <productIdContext.Provider value={state}>
-      <div className=" bg-pink-400">
+      <div className="">
         {children}
       </div>
     // </productIdContext.Provider>

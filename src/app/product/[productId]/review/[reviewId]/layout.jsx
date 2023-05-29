@@ -1,6 +1,6 @@
 export default ({children}) =>{
   return (
-    <div className=" bg-orange-400 ">
+    <div className=" bg-orange-100 ">
       {children}
     </div>
   )
