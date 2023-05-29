@@ -3,7 +3,7 @@ import { Provider } from 'react-redux'
 import store from '@/state'
 import React from 'react'
 
-function Provider({children}) {
+function XProvider({children}) {
   return (
     <Provider store={store}>
       {children}
@@ -11,4 +11,4 @@ function Provider({children}) {
   )
 }
 
-export default Provider
+export default XProvider

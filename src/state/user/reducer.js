@@ -1,4 +1,3 @@
-import { cookies } from 'next/headers';
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
