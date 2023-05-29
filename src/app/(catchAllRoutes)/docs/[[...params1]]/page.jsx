@@ -1,6 +1,8 @@
 import React from 'react'
 
+
 function page({params:{params1=[]}}) {
+
   if(params1.length == 2){
     return (
       <h1>

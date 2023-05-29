@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
     "@vercel/analytics": "^1.0.1",
     "autoprefixer": "10.4.14",
     "eslint": "8.41.0",
@@ -18,8 +19,15 @@
     "postcss": "8.4.23",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-redux": "^8.0.5",
     "styled-components": "^5.3.11",
     "tailwindcss": "3.3.2",
     "vercel": "^29.3.6"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^6.6.2"
   }
 }

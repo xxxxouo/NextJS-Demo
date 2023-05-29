@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "pancake":["./packages/pancake-toolkit/packages/pancake-uikit/src"]
     }
   }
 }
