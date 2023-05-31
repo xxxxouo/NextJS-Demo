@@ -12,7 +12,7 @@ import dynamic from 'next/dynamic';
 
 const DynamicPage = dynamic(()=>import('./components/ProductList'))
 const DynamicBtn = dynamic(()=>import('./components/Bottom'))
-const FallingBunnies = dynamic(() => import('pancake').then((mod) => mod.FallingBunnies), {
+const FallingBunnies = dynamic(() => import('../../../packages/pancake-uikit-wagmi/packages/pancake-uikit/src').then((mod) => mod.FallingBunnies), {
   ssr: false, // 这将关闭服务器端渲染
 });
 
