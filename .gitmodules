@@ -1,3 +1,6 @@
 [submodule "packages/pancake-toolkit"]
 	path = packages/pancake-toolkit
 	url = https://github.com/pancakeswap/pancake-toolkit.git
+[submodule "packages/pancake-uikit-wagmi"]
+	path = packages/pancake-uikit-wagmi
+	url = https://github.com/xxxxouo/pancake-uikit-wagmi.git
