@@ -11,10 +11,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <reduxProvider >
+        {/* <reduxProvider > */}
           <Navbar />
           {children}
-        </reduxProvider>
+        {/* </reduxProvider> */}
       </body>
     </html>
   )

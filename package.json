@@ -7,7 +7,8 @@
     "dev:prod": "APP_ENV=production next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall":"lerna bootstrap"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
