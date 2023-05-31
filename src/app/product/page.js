@@ -1,7 +1,7 @@
 "use client"
 import React,{ Suspense } from 'react'
 import dynamic from 'next/dynamic';
-import { Spinner } from 'pancake';
+// import { Spinner } from 'pancake';
 // console.log(<Button></Button>);
 // export async function generateMetadata({params,searchParams}){
 //   const data = await new Promise((res)=>{setTimeout(res("商品"),1000)})
@@ -19,7 +19,7 @@ export default async function page() {
     <div>
       <DynamicPage />
       <DynamicBtn />
-      <Spinner />
+      {/* <Spinner /> */}
     </div>
   )
 }

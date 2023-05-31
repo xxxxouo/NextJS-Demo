@@ -1,9 +1,9 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+// import { Inter } from 'next/font/google'
 import Navbar from '@/components/navbar'
 import reduxProvider from './reduxProvider'
 
-const inter = Inter({ subsets: ['latin'] })
+// const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: '小洁的demo',
   description: 'by NextJS',
