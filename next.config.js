@@ -14,12 +14,7 @@ const nextConfig = {
   },
   env:{
     APP_ENV:process.env.APP_ENV
-  },
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    config.resolve.alias['@'] = path.resolve(__dirname, './src');
-    config.resolve.alias['pancake'] = path.resolve(__dirname, './packages/pancake-uikit-wagmi/packages/pancake-uikit/src');
-    return config;
-  },
+  }
 }
 
 module.exports = nextConfig

@@ -12,9 +12,6 @@ import dynamic from 'next/dynamic';
 
 const DynamicPage = dynamic(()=>import('./components/ProductList'))
 const DynamicBtn = dynamic(()=>import('./components/Bottom'))
-const FallingBunnies = dynamic(() => import('../../../packages/pancake-uikit-wagmi/packages/pancake-uikit/src').then((mod) => mod.FallingBunnies), {
-  ssr: false, // 这将关闭服务器端渲染
-});
 
 export default async function page() {
   // let users = await db.query();
@@ -23,7 +20,6 @@ export default async function page() {
     <div>
       <DynamicPage />
       <DynamicBtn />
-      <FallingBunnies />
     </div>
   )
 }
