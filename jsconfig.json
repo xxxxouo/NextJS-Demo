@@ -2,7 +2,7 @@
   "compilerOptions": {
     "paths": {
       "@/*": ["./src/*"],
-      "pancake":["./packages/pancake-toolkit/packages/pancake-uikit/src"]
+      "pancake":["./packages/pancake-uikiy-wagmi/packages/pancake-uikit/src"]
     }
   }
 }

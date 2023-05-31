@@ -23,7 +23,7 @@
     "styled-components": "^5.3.11",
     "tailwindcss": "3.3.2",
     "vercel": "^29.3.6",
-    "pancake": "file:packages/pancake-toolkit/packages/pancake-uikit"
+    "pancake": "file:packages/pancake-uikiy-wagmi/packages/pancake-uikit/src"
   },
   "workspaces": [
     "packages/*"
