@@ -1,5 +1,12 @@
+"use client"
 import React from 'react'
+import dynamic from 'next/dynamic';
 
+const ScreenRecord = dynamic(()=>import('../components/ScreenRecord'),{
+  loading:()=> (
+    <p>loading....</p>
+  )
+})
 
 function page({params:{params1=[]}}) {
 
@@ -18,6 +25,7 @@ function page({params:{params1=[]}}) {
   return (
     <div>
       所有路由模块
+      <ScreenRecord />
     </div>
   )
 }

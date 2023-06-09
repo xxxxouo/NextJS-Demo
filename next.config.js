@@ -13,7 +13,7 @@ const nextConfig = {
     ]
   },
   env:{
-    APP_ENV:process.env.APP_ENV
+    APP_ENV:process.env.APP_ENV, // 这里可以不用写
   }
 }
 
