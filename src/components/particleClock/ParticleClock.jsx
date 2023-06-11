@@ -63,11 +63,14 @@ function ParticleClock() {
     }
     const partciles = []
     let text = null
+
     function clear(){
+
       ctx.clearRect(0,0,clockRef.current.width,clockRef.current.height)
     }
 
     function draw(){
+      if(!clockRef.current) return
       clear()
       update()
       partciles.forEach((p)=> p.draw())
@@ -87,7 +90,7 @@ function ParticleClock() {
       const {height,width} = clockRef.current
       ctx.fillStyle = '#000'
       ctx.textBaseline = 'middle'
-      ctx.font = `${140 * devicePixelRatio}px sans-serif`
+      ctx.font = `${100 * devicePixelRatio}px sans-serif`
       ctx.fillText(text,(width - ctx.measureText(text).width)/2,height/2)
       const points = getPoints()
       clear()
@@ -131,7 +134,7 @@ function ParticleClock() {
 
   return (
     <div>
-      <canvas id='canvas' width={200} ref={clockRef}>粒子时钟</canvas>
+      <canvas id='canvas' ref={clockRef}>粒子时钟</canvas>
     </div>
   )
 }

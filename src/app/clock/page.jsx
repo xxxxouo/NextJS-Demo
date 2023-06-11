@@ -1,5 +1,11 @@
-import React from 'react'
-import ParticleClock from '@/components/particleClock/ParticleClock'
+"use client"
+import React, { useEffect } from 'react'
+import dynamic from 'next/dynamic';
+const ParticleClock = dynamic(()=>import('@/components/particleClock/ParticleClock'),{
+  loading:()=>(
+    <p>loading...</p>
+  )
+})
 function page() {
   return (
     <div>

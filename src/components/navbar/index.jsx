@@ -10,7 +10,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 export default React.memo( function Navbar() {
   return (
     <TitleDiv className=' w-full h-12 relative justify-between flex'>
-      <div className='flex gap-3 items-center ml-7'>
+      <div className='flex items-center '>
         <RenderMenu />
       </div>
     </TitleDiv>
