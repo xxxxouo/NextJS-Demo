@@ -11,4 +11,8 @@ export default  () =>[
     label: '后代路由',
     href:'/docs'
   },
+  {
+    label:'粒子时钟',
+    href:'/clock'
+  }
 ]
