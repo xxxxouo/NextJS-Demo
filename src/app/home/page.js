@@ -8,6 +8,7 @@ export const metadata = {
 let blurDataURL = fs.readFileSync('src/asset/imgurl.txt','utf-8')
  
 function Home() {
+  console.log(process.env);
 
   return (
     <div className=' flex  flex-col items-center gap-2'>
