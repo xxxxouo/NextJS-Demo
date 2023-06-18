@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const path = require('path');
+// import withPlaiceholder from "@plaiceholder/next";
 const nextConfig = {
   reactStrictMode: true,
   // 重定向
@@ -18,4 +19,4 @@ const nextConfig = {
   }
 }
 
-module.exports = nextConfig
+module.exports =nextConfig

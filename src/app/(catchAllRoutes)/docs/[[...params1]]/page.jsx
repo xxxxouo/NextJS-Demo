@@ -2,6 +2,12 @@
 import React from 'react'
 import dynamic from 'next/dynamic';
 
+const ClipDemo = dynamic(()=>import("@/components/clipboard"),{
+  loading:()=>{
+    
+  }
+})
+
 const ScreenRecord = dynamic(()=>import('../components/ScreenRecord'),{
   loading:()=> (
     <p>loading....</p>
@@ -26,12 +32,7 @@ function page({params:{params1=[]}}) {
     <div>
       所有路由模块
       <ScreenRecord />
-      <div>
-        <div className=' mb-8'>1</div>
-      </div>
-      <div>
-        <div className=' mt-8'>2</div>
-      </div>
+      <ClipDemo />
     </div>
   )
 }
