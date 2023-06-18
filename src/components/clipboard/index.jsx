@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 
-export default function index() {
+export default function ClipDemo() {
   const [txtv, setTxtv] = useState('')
   const iref = useRef()
   function clas (){
