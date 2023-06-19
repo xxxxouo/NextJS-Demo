@@ -13,6 +13,12 @@ export default  () =>[
   },
   {
     label:'粒子时钟',
-    href:'/clock'
+    href:'/clock',
+    isphone:true
+  },
+  {
+    label:'训练场',
+    href:'/train',
+    isphone:true
   }
 ]

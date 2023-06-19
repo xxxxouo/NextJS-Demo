@@ -1,14 +1,12 @@
 import React, { Fragment, useCallback, useEffect, useState } from 'react'
 import Link from 'next/link';
 import { usePathname } from 'next/navigation'
-import menuList  from './config'
 
-function RenderMenuList() {
+function RenderMenuList({MemuList}) {
   const pathname = usePathname()
-  const MemuList = menuList()
 
-  return MemuList.map(route => {
-    return (
+  return MemuList.map(route => 
+     (
       <Link 
         className={pathname.startsWith(route.href)?`text-purple-500 font-bold leading-3rem px-6` : 'leading-3rem px-6'} 
         key={route.href} 
@@ -16,7 +14,7 @@ function RenderMenuList() {
         {route.label}
       </Link>
     )
-  })
+  )
 }
 
 export default RenderMenuList

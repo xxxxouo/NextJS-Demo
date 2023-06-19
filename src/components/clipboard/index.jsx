@@ -43,7 +43,7 @@ export default function ClipDemo() {
       <hr />
       <p className=' text-red-400'>复制我试试</p>
       <>
-        <label  htmlFor="txt" className=' mr-3 select-none'>上一次复制的内容:</label>
+         <label  htmlFor="txt" className=' mr-3 select-none'>上一次复制的内容:</label>
         <input className={clas()} type="text" id='txt' onChange={()=>{}} disabled value={txtv} />
       </>
       <hr className=' mt-5' />
