@@ -4,7 +4,8 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const DivBox = styled.div`
-animation:slideDown .5s linear forwards;
+will-change:animation;
+animation:slideDown .3s linear forwards;
 @keyframes slideDown {
   0% {
       transform: translateY(-100%);
@@ -17,7 +18,7 @@ animation:slideDown .5s linear forwards;
 }
 `
 
-function RightList({phoneRightList,isshow}) {
+function RightList({phoneRightList,isshow,setIsshow}) {
   const pathname = usePathname()
   if(!isshow) return null
   return (
@@ -28,8 +29,11 @@ function RightList({phoneRightList,isshow}) {
            <Link 
              className={pathname.startsWith(route.href)?`text-purple-500 font-bold leading-3rem px-6` : 'leading-3rem px-6'} 
              key={route.href} 
-             href={route.href}>
+             href={route.href}
+             onClick={() => setIsshow(false)}
+             >
              {route.label}
+             
            </Link>
          )
        )

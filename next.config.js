@@ -3,6 +3,10 @@ const path = require('path');
 // import withPlaiceholder from "@plaiceholder/next";
 const nextConfig = {
   reactStrictMode: true,
+  compiler: {
+    // ssr and displayName are configured by default
+    styledComponents: true,
+  },
   // 重定向
   async redirects() {
     return [

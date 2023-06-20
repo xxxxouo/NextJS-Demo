@@ -56,7 +56,7 @@ export default React.memo(function Navbar() {
           </div>
         }
         {
-          isMobile && <RightList isshow={isshow} phoneRightList={phoneRightList}/>
+          isMobile && <RightList setIsshow={setIsshow} isshow={isshow} phoneRightList={phoneRightList}/>
         }
       </div>
     </TitleDiv>
