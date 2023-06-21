@@ -1,6 +1,6 @@
-"use client"
-import React,{ Suspense } from 'react'
-import dynamic from 'next/dynamic';
+"use client";
+import React, { Suspense } from "react";
+import dynamic from "next/dynamic";
 // import { FallingBunnies } from 'pancake';
 // console.log(<Button></Button>);
 // export async function generateMetadata({params,searchParams}){
@@ -10,8 +10,8 @@ import dynamic from 'next/dynamic';
 //    }
 // }
 
-const DynamicPage = dynamic(()=>import('./components/ProductList'))
-const DynamicBtn = dynamic(()=>import('./components/Bottom'))
+const DynamicPage = dynamic(() => import("./components/ProductList"));
+const DynamicBtn = dynamic(() => import("./components/Bottom"));
 
 export default async function page() {
   // let users = await db.query();
@@ -21,5 +21,5 @@ export default async function page() {
       <DynamicPage />
       <DynamicBtn />
     </div>
-  )
+  );
 }

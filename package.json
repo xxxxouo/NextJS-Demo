@@ -33,6 +33,7 @@
     "packages/*"
   ],
   "devDependencies": {
+    "eslint-config-prettier": "^8.8.0",
     "lerna": "^6.6.2",
     "lqip-loader": "^2.2.1"
   }

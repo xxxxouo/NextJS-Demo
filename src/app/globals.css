@@ -25,6 +25,6 @@ body {
     )
     rgb(var(--background-start-rgb));
 } */
-::selection{
+::selection {
   background-color: #9efce2;
 }
