@@ -1,13 +1,13 @@
 "use client"
 import React from 'react'
 import dynamic from 'next/dynamic';
-import useWindowApi from './hooks/useWindowApi';
+import { useDPR } from './hooks/useWindowApi';
 
 const DeadRender = dynamic(()=>import('./components/DeadRender'))
 const ScrollList = dynamic(()=>import('./components/UnlimitedList'))
 
 function page() {
-  const dpr = useWindowApi()
+  const dpr = useDPR()
   return (
     <div className=' mt-3'>
       <DeadRender />

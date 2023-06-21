@@ -56,7 +56,7 @@ function UnlimitedList() {
   return (
     <div className=' w-full'>
       <hr />
-      <div className=' w-1/2 lg:w-1/3 ml-2'>
+      <div className=' w-full lg:w-1/3 lg:ml-2'>
         <Ul id='root'>
           <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, accusamus?</li>
           <li>Nisi vero doloribus repellat aliquam ea nam sit nesciunt fuga?</li>
