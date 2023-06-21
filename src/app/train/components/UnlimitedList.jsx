@@ -1,13 +1,15 @@
 "use client"
-import React, { useEffect, useLayoutEffect } from 'react'
+import React, { useEffect,useState,useLayoutEffect,useMemo } from 'react'
 import styled from 'styled-components'
-import { randomImg } from '@/utils'
+import { randomImg,loadImg } from '@/utils'
+import useIntersectionObserver from '../hooks/useIntersectionObserver'
 
 const Ul = styled.ul`
 display:flex;
 flex-direction: column;
 &>img{
   width:300px;
+  height:300px;
   margin: 10px 0;
   border:1px solid #000;
   display:inline-block;
@@ -24,62 +26,66 @@ flex-direction: column;
 `
 
 function UnlimitedList() {
+  const { observerRef,isIntersecting } = useIntersectionObserver()
+  const [ imgList, setImgList ] = useState([])
+  const [ loading, setLoading ] = useState(false)
+  const [observer, setObserver] = useState(null)
+
+  useEffect(() => {
+    console.log(1);
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(entry =>{
+          entry.target.classList.toggle('show', entry.isIntersecting);
+          if(entry.isIntersecting) observer.unobserve(entry.target);
+      });
+    },{
+      threshold:.3,
+    });
+    setObserver(observer)
+  },[])
+  
+  
+  useEffect(()=>{
+    if(isIntersecting && !loading){
+      setLoading(true)
+      loadImg().then(res =>{
+        setImgList((pre)=>{
+          return [...pre,...res]
+        })
+        setLoading(false)
+      })
+    }
+  },[isIntersecting])
 
   useEffect(()=>{
-    const root = document.getElementById('root')
+    if(imgList.length == 0 ) return
+    const Imgs = document.querySelectorAll('img:not(.observed)')
     
-    const observer = new IntersectionObserver((entries)=>{
-      entries.forEach(card =>{
-        card.target.classList.toggle('show', card.isIntersecting)
-        if(card.isIntersecting) observer.unobserve(card.target)
-      })
-    },{
-      threshold:.5,
+    Imgs.forEach(item => {
+      item.classList.add('observed')
+      observer.observe(item)
     })
 
-    const lastObserver = new IntersectionObserver(([entries])=>{
-      if(!entries.isIntersecting) return
-      loadMore()
-      lastObserver.unobserve(entries.target)
-    })
-    // cards.forEach(card => observer.observe(card))
-    
+  },[imgList])
+  
 
-    const loadMore = ()=>{
-      console.log('loadmore...');
-      for(let i = 0; i < 10; i++){
-        const Img = document.createElement('img')
-        randomImg(300).then(res =>{
-          Img.src = res;
-          root.appendChild(Img)
-          observer.observe(Img)
-          if( i == 9){
-            lastObserver.observe(document.querySelector('img:last-child'))
-          }
-        }).catch()
-      }
-    }
-    // 初始加载图
-    for(let i = 0; i<10 ; i++){
-      const Img = document.createElement('img')
-      randomImg(300).then(res =>{
-        Img.src = res;
-        root.appendChild(Img)
-        observer.observe(Img)
-        if( i == 9){
-          lastObserver.observe(document.querySelector('img:last-child'))
-        }
-      }).catch()
-      
-    }
-  },[])
 
   return (
     <div className=' w-full'>
       <hr />
       <div className=' w-full lg:w-1/3 lg:ml-2'>
         <Ul id='root' className=' w-full'>
+          {
+            imgList?.length>0 && 
+            imgList.map((item,idx) => (
+              <img key={idx} src={item} alt="小洁大王" />
+            ))
+          }
+          {
+            loading && <h3 className=' text-center'>Loading....</h3>
+          }
         </Ul>
+        <div ref={observerRef}></div>
       </div>
     </div>
   )
