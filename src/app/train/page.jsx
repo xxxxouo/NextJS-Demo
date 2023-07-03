@@ -2,12 +2,14 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import { useDPR } from "./hooks/useWindowApi";
+import Factory from "@/utils";
 
 const DeadRender = dynamic(() => import("./components/DeadRender"));
 const ScrollList = dynamic(() => import("./components/UnlimitedList"));
 
 function page() {
   const dpr = useDPR();
+  // console.log(Factory.title);  // 通过工厂函数获取title
   return (
     <div className=" mt-3">
       <DeadRender />

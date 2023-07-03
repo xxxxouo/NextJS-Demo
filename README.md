@@ -3,3 +3,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Preview
 
 [https://crushme.vercel.app/](https://crushme.vercel.app/)
+
+## prettier
+```sh
+npx prettier --write .
+```
