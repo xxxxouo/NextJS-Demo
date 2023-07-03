@@ -4,8 +4,7 @@ import styled from 'styled-components'
 import { ArrowUp } from 'react-feather'
 const GTbox = styled.div`
   position: fixed;
-  right: 20px;
-  bottom: 20px;
+
   width: 50px;
   height: 50px;
   background-color: #836FFF;
@@ -18,6 +17,19 @@ const GTbox = styled.div`
   line-height: 50px;
   font-size: 20px;
   color: #fff;
+  animation: fadeIn 0.3s ease-in-out 1 forwards ;
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      right: 0px;
+      bottom: 0px;
+    }
+    to {
+      opacity: 1;
+      right: 20px;
+      bottom: 20px;
+    }
+  }
   &:hover {
     background-color: #999;
   }
@@ -31,8 +43,6 @@ export default function Gotop() {
       behavior: 'smooth'
     })
   }
-  
-
 
   useEffect(() => {
     const handleScroll = () => {
