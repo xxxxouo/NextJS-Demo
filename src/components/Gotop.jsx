@@ -1,13 +1,12 @@
-"use client"
-import React, { useMemo, useEffect, useState } from 'react'
-import styled from 'styled-components'
-import { ArrowUp } from 'react-feather'
+"use client";
+import React, { useMemo, useEffect, useState } from "react";
+import styled from "styled-components";
+import { ArrowUp } from "react-feather";
 const GTbox = styled.div`
   position: fixed;
-
   width: 50px;
   height: 50px;
-  background-color: #836FFF;
+  background-color: #836fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,7 +16,7 @@ const GTbox = styled.div`
   line-height: 50px;
   font-size: 20px;
   color: #fff;
-  animation: fadeIn 0.3s ease-in-out 1 forwards ;
+  animation: fadeIn 0.3s ease-in-out 1 forwards;
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -33,27 +32,28 @@ const GTbox = styled.div`
   &:hover {
     background-color: #999;
   }
-`
+`;
 
 export default function Gotop() {
-  const [ showTop, setShowTop ] = useState(false)
+  const [showTop, setShowTop] = useState(false);
   const gotop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
-    })
-  }
+      behavior: "smooth",
+    });
+  };
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
-      setShowTop(scrollTop >= 800)
-    }
-    window.addEventListener('scroll', handleScroll)
+      const scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      setShowTop(scrollTop >= 800);
+    };
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     showTop && (
@@ -61,5 +61,5 @@ export default function Gotop() {
         <ArrowUp />
       </GTbox>
     )
-  )
+  );
 }
