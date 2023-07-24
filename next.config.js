@@ -21,12 +21,7 @@ const nextConfig = {
     APP_ENV: process.env.APP_ENV,
     APP_IMGURL: process.env.APP_IMGURL,
   },
-  // 构建时忽略eslint
-  eslint: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has ESLint errors.
-    ignoreDuringBuilds: true,
-  }
+  
 };
 
 module.exports = nextConfig;

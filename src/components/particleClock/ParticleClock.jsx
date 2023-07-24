@@ -80,7 +80,6 @@ function ParticleClock() {
     function getText() {
       return new Date().toTimeString().substring(0, 8);
     }
-
     function update() {
       const newText = getText();
       if (newText == text) return;

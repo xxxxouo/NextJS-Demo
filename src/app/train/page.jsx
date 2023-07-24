@@ -1,8 +1,9 @@
 "use client";
-import React from "react";
+import React,{ useEffect, useLayoutEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { useDPR } from "./hooks/useWindowApi";
 import Factory from "@/utils";
+import { flushSync } from "react-dom";
 
 const DeadRender = dynamic(() => import("./components/DeadRender"));
 const ScrollList = dynamic(() => import("./components/UnlimitedList"));
