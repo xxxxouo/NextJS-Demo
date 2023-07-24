@@ -8,7 +8,7 @@ import { flushSync } from "react-dom";
 const DeadRender = dynamic(() => import("./components/DeadRender"));
 const ScrollList = dynamic(() => import("./components/UnlimitedList"));
 
-function page() {
+function Page() {
   const dpr = useDpr();
   // console.log(Factory.title);  // 通过工厂函数获取title
   return (
@@ -20,4 +20,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
