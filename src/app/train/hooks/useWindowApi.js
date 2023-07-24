@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-export function useDPR() {
+export function useDpr() {
   const [dpr, setDpr] = useState(null);
 
   useEffect(() => {
