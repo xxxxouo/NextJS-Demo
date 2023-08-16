@@ -7,6 +7,7 @@ import { flushSync } from "react-dom";
 
 const DeadRender = dynamic(() => import("./components/DeadRender"));
 const ScrollList = dynamic(() => import("./components/UnlimitedList"));
+const CatchCanvas = dynamic(() => import("./components/CatchCanvas"));
 
 function Page() {
   const dpr = useDpr();
@@ -15,6 +16,7 @@ function Page() {
     <div className=" mt-3">
       <DeadRender />
       <p>当前设备像素比为:{dpr}</p>
+      <CatchCanvas />
       <ScrollList />
     </div>
   );

@@ -10,7 +10,6 @@ const ScreenRecord = dynamic(() => import("../components/ScreenRecord"), {
   loading: () => <p>loading....</p>,
 });
 
-const CatchCanvas = dynamic(() => import("../components/CatchCanvas"));
 
 function page({ params: { params1 = [] } }) {
   if (params1.length == 2) {
@@ -27,7 +26,6 @@ function page({ params: { params1 = [] } }) {
       所有路由模块
       <ScreenRecord />
       <ClipDemo />
-      <CatchCanvas />
     </div>
   );
 }
