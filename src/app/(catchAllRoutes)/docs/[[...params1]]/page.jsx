@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React,{ useRef } from "react";
 import dynamic from "next/dynamic";
 
 const ClipDemo = dynamic(() => import("@/components/clipboard"), {
@@ -9,6 +9,8 @@ const ClipDemo = dynamic(() => import("@/components/clipboard"), {
 const ScreenRecord = dynamic(() => import("../components/ScreenRecord"), {
   loading: () => <p>loading....</p>,
 });
+
+const CatchCanvas = dynamic(() => import("../components/CatchCanvas"));
 
 function page({ params: { params1 = [] } }) {
   if (params1.length == 2) {
@@ -25,6 +27,7 @@ function page({ params: { params1 = [] } }) {
       所有路由模块
       <ScreenRecord />
       <ClipDemo />
+      <CatchCanvas />
     </div>
   );
 }
