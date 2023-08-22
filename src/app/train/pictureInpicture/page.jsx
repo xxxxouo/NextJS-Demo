@@ -1,11 +1,11 @@
 "use client"
 import React, { useEffect, useRef } from 'react'
 
-export default function page() {
+export default function Page() {
   const videoRef= useRef(null)
-  const onNext =  async ()=>{
+  const onNext = ()=>{
     if(videoRef.current){
-      await videoRef.current.requestPictureInPicture({
+      videoRef.current.requestPictureInPicture({
         width: 480,
         height: 270,
       })
