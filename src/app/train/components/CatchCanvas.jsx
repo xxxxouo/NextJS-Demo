@@ -29,12 +29,10 @@ export default function CatchCanvas() {
   return (
     <div className='flex flex-col items-center justify-center'>
       <div ref={componentRef} className=''>
-        <text className=' text-lg'>洁神牛逼*({currentNumber})👌</text>
+        <span className=' text-lg'>洁神牛逼*{currentNumber}</span>
       </div>
-      <button onClickCapture={handleConvertToCanvas}>将元素转换为canvas</button>
-      <div className='flex flex-wrap' ref={divRef}>
-
-      </div>
+      <button onClickCapture={handleConvertToCanvas}>将元素转换为canvas👋</button>
+      <div className='flex flex-wrap' ref={divRef}></div>
     </div>
   )
 }

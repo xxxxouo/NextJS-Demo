@@ -11176,6 +11176,11 @@
   "resolved" "https://registry.npmjs.org/text-table/-/text-table-0.2.0.tgz"
   "version" "0.2.0"
 
+"text-to-image-video@^1.0.2":
+  "integrity" "sha512-MrAWL56f2jvUzgTVY3hUX6rSz48vb8K7o+/h7SL8NKbtK7xdEbMwUHtr8em5rvc3ILau7gQCrb8z4SNRqAubcg=="
+  "resolved" "https://registry.npmjs.org/text-to-image-video/-/text-to-image-video-1.0.2.tgz"
+  "version" "1.0.2"
+
 "thenify-all@^1.0.0":
   "integrity" "sha512-RNxQH/qI8/t3thXJDwcstUO4zeqo64+Uy/+sNVRBx4Xn2OX+OZ9oP+iJnNFqplFra2ZUVeKCSa2oVWi3T4uVmA=="
   "resolved" "https://registry.npmjs.org/thenify-all/-/thenify-all-1.6.0.tgz"

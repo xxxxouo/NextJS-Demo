@@ -15,7 +15,7 @@ export default function Page() {
     <div className='flex flex-col justify-center items-center gap-5'>
       <div id="playerContainer">
         <div id="player">
-          <video ref={videoRef} src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" id='video'></video>
+          <video width={300} ref={videoRef} src="/test.mp4" controls id='video'></video>
         </div>
       </div>
       <button className='p-3 border-solid border border-blue-400 rounded-lg' onClick={onNext}>打开画中画窗口!</button>

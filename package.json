@@ -28,6 +28,7 @@
     "styled-components": "^5.3.11",
     "styled-system": "^5.1.5",
     "tailwindcss": "3.3.2",
+    "text-to-image-video": "^1.0.2",
     "vercel": "^29.3.6"
   },
   "workspaces": [
