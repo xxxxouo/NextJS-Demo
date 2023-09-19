@@ -32,7 +32,7 @@ export default function CatchCanvas() {
       </div>
       <Button
         variant="outline"
-        className="  bg-destructive  text-destructive-foreground  dark:bg-white"
+        className="  bg-destructive  text-destructive-foreground  dark:bg-pink-400"
         onClickCapture={handleConvertToCanvas}
       >
         将元素转换为canvas👋
