@@ -21,7 +21,6 @@ const nextConfig = {
     APP_ENV: process.env.APP_ENV,
     APP_IMGURL: process.env.APP_IMGURL,
   },
-  
 };
 
 module.exports = nextConfig;

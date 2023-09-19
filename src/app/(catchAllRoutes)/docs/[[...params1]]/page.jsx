@@ -1,5 +1,5 @@
 "use client";
-import React,{ useRef } from "react";
+import React, { useRef } from "react";
 import dynamic from "next/dynamic";
 
 const ClipDemo = dynamic(() => import("@/components/clipboard"), {
@@ -9,7 +9,6 @@ const ClipDemo = dynamic(() => import("@/components/clipboard"), {
 const ScreenRecord = dynamic(() => import("../components/ScreenRecord"), {
   loading: () => <p>loading....</p>,
 });
-
 
 function page({ params: { params1 = [] } }) {
   if (params1.length == 2) {

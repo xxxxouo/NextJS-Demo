@@ -1,1 +1,1 @@
-const xj = 'nb'
+const xj = "nb";

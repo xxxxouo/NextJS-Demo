@@ -7,7 +7,7 @@ import img from "@@/wechat.jpg";
 export default function BlurData({ blurDataURL, children }) {
   // const url = `https://ipfs.filebase.io/ipfs/QmTUykxcy9fhJmbrwUVMArMqnYQ56FYZjeaAi159p4ake5`
   const [show, setShow] = useState(false);
-  
+
   return (
     <div className=" flex justify-center flex-col items-center">
       <H1 className=" text-purple-200 lg:text-5xl text-2xl select-none">

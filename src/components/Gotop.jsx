@@ -34,10 +34,9 @@ const GTbox = styled.div`
   }
 `;
 
-
 export default function Gotop() {
   const [showTop, setShowTop] = useState(false);
-    
+
   const gotop = () => {
     window.scrollTo({
       top: 0,
